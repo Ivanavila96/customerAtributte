@@ -89,14 +89,14 @@ return(
       <hr/>
                 <br/>
                <TextStyle variation="strong">Show on Cart Page:</TextStyle>
-                <input type="checkbox" name="required" value="Yes" helpText="Tick if you want to use this attribute on cart page."/>
+                <input type="checkbox" name="required" value="Yes"/>
                 <p>Tick if this attribute is required to be 
                     filled by your customers</p>
                 <br/>
 
 
                 <TextStyle variation="strong">Show on Register Page:</TextStyle>
-                <input type="checkbox" name="required" value="Yes" helpText="'Tick if you want to use this attribute on register page.'"/>
+                <input type="checkbox" name="required" value="Yes"/>
                 <p>Tick if this attribute is required to be 
                     filled by your customers</p>
                 <br/>

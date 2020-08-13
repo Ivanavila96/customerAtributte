@@ -6,6 +6,7 @@ import { Redirect } from '@shopify/app-bridge/actions';
 import {ArrowLeftMinor, AddMajorMonotone, NoteMajorMonotone, HomeMajorMonotone, OrdersMajorTwotone, MobileHamburgerMajorMonotone, ListMajorMonotone, BankMajorMonotone,TroubleshootMajorMonotone,SettingsMajorMonotone} from '@shopify/polaris-icons';
 import AttributeTable from './TablaComponentes';
 import AttCompany from './AttributeCompany';
+import {form} from './AttributeCreation';
 import {v4 as uuidv4} from 'uuid';
 
 function Lista  (){
@@ -47,7 +48,7 @@ function Lista  (){
       <Stack distribution="center">
       <AttributeTable deleteAtributo={deleteAtributo} Atributos={Atributos}/>
       </Stack>
-     
+     <form addAtributo={addAtributo}/>
     </Card>
     </>
   )

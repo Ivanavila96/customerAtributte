@@ -4,7 +4,7 @@ import React, {Fragment, Component, useCallback, useState, useRef} from "react";
 import {Card,Heading, Button, DataTable ,Link,EmptyState, AppProvider,Layout,Page, Stack, ActionList,  Avatar, ContextualSaveBar, FormLayout,Frame, Loading,Modal, Navigation, SkeletonBodyText, SkeletonDisplayText, SkeletonPage, TextContainer, TextField, Toast, TopBar} from "@shopify/polaris";
 import { Redirect } from '@shopify/app-bridge/actions';
 import {ArrowLeftMinor, AddMajorMonotone, NoteMajorMonotone, HomeMajorMonotone, OrdersMajorTwotone, MobileHamburgerMajorMonotone, ListMajorMonotone, BankMajorMonotone,TroubleshootMajorMonotone,SettingsMajorMonotone} from '@shopify/polaris-icons';
-
+ 
 const AttributeTable = (props) => {
     return(
     <table border="1" cellSpacing="8" cellPadding="10" align="center">

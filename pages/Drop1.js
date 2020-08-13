@@ -9,65 +9,10 @@ import { useForm } from 'react-hook-form'
 
 
 
+
+
  export class Drop_1 extends React.Component {
 
-  state = {
-    fields:{},
-    id:"",
-    code:"",
-    label:"",
-    Type:"",
-    sortingorder:"",
-    status:"",
-    cartpage:"",
-    registerpage:"",
-    accountpage:"",
-    ordergrid:"",
-    customergrid:""
-  };
-  
-  onChange = updatedValue => {
-    this.setState({
-      fields: {
-        ...this.state.fields,
-        ...updatedValue
-      }
-    });
-  };
-
-  change = e => {
-    this.props.onChange({ [e.target.name]: e.target.value });
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
-
-  onSubmit = e => {
-    e.preventDefault();
-    // this.props.onSubmit(this.state);
-    this.setState({
-      firstName: "",
-      lastName: "",
-      username: "",
-      email: "",
-      password: ""
-    });
-
-    this.props.onChange({
-      id:"",
-      code:"",
-      label:"",
-      Type:"",
-      sortingorder:"",
-      status:"",
-      cartpage:"",
-      registerpage:"",
-      accountpage:"",
-      ordergrid:"",
-      customergrid:""
-    });
-  };
- 
 
   constructor(){
     super();
