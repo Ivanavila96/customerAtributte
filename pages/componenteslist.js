@@ -6,8 +6,8 @@ import { Redirect } from '@shopify/app-bridge/actions';
 import {ArrowLeftMinor, AddMajorMonotone, NoteMajorMonotone, HomeMajorMonotone, OrdersMajorTwotone, MobileHamburgerMajorMonotone, ListMajorMonotone, BankMajorMonotone,TroubleshootMajorMonotone,SettingsMajorMonotone} from '@shopify/polaris-icons';
 import AttributeTable from './TablaComponentes';
 import AttCompany from './AttributeCompany';
-import {form} from './AttributeCreation';
 import {v4 as uuidv4} from 'uuid';
+import AttributeCreation from './AttributeCreation'
 
 function Lista  (){
   
@@ -46,10 +46,16 @@ function Lista  (){
 
     <Card sectioned>
       <Stack distribution="center">
-      <AttributeTable deleteAtributo={deleteAtributo} Atributos={Atributos}/>
+      <AttributeCreation addAtributo ={addAtributo}/>
       </Stack>
-     <form addAtributo={addAtributo}/>
     </Card>
+    
+    <Card sectioned>
+    <AttributeTable deleteAtributo={deleteAtributo} Atributos={Atributos}/>
+    </Card>
+    <br/>
+    <br/>
+    <br/>
     </>
   )
 }

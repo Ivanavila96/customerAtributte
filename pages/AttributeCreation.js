@@ -10,59 +10,20 @@ import { useForm } from 'react-hook-form'
 import {v4 as uuidv4} from 'uuid';
 
 
-export default class AttCreation extends React.Component  {
+const AttributeCreation = (props) => {
+
   
-  state = {
-    id:"",
-    code:"",
-    label:"",
-    Type:"",
-    sortingorder:"",
-    status:"",
-    cartpage:"",
-    registerpage:"",
-    accountpage:"",
-    ordergrid:"",
-    customergrid:""
-  };
-  
-  change = e => {
-    this.props.onChange({ [e.target.name]: e.target.value });
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
+  const {register, errors, handleSubmit} = useForm();
 
-  onSubmit = e => {
-    e.preventDefault();
-    // this.props.onSubmit(this.state);
-    this.setState({
-      firstName: "",
-      lastName: "",
-      username: "",
-      email: "",
-      password: ""
-    });
+  const onSubmit = (data, e) => {
+      data.id = null
+      console.log(data)
+      props.addAtributo(data)
+      e.target.reset();
+  }
 
-    this.props.onChange({
-      id:"",
-      code:"",
-      label:"",
-      Type:"",
-      sortingorder:"",
-      status:"",
-      cartpage:"",
-      registerpage:"",
-      accountpage:"",
-      ordergrid:"",
-      customergrid:""
-    });
-  };
-render(){
 
- 
 return(
-
 <>
   <Card sectioned title=" Create attribute">
     <Stack distribution="leading">
@@ -78,25 +39,66 @@ return(
   </Card>
         
 <Page>
-  <form id="inicial">
+  
+
+  <form onSubmit={handleSubmit(onSubmit)}>
     <Card sectioned>     
       <TextStyle variation="strong">Use Template:</TextStyle>
         <Drop_1/>
-   
+        <hr/>
+        <br/>
+        <Heading>Attribute Properties</Heading>    
+        <br/>
+    <hr/>
+    <br/>
+        
+        <TextStyle variation="strong">Label*:</TextStyle>
+        <input style={{width:'100%', height:'35px'}}
+          type="text"
+          name="label"
+          placeholder="Attribute Label"
+          ref={register({required: {value: true, message: 'Valor requerido'}})}/>
+        <p>Attribute label</p>
+        <br/>
+
+        <TextStyle variation="strong">Code:</TextStyle>
+        <input style={{width:'100%', height:'35px'}}
+        type="text"
+        name="code"
+        placeholder="Attribute Label"
+        ref={register({required: {value: true, message: 'Valor requerido'}})}/>
+        <p>For internal use. Must be unique with 
+           no spaces and length &lt;= 30. Let 
+           it empty for auto generation</p>
+        <br/>
+
+        <TextStyle variation="strong">Sorting Order:</TextStyle>
+        <input style={{width:'100%', height:'35px'}}
+        name="sortingorder"
+        type="number"
+        placeholder="Attribute Label"
+        ref={register({required: {value: true, message: 'Valor requerido'}})}/>
+          
+        <br/>
+        <br/>
+
+        <TextStyle variation="strong">Type*:</TextStyle>
+            <Drop_2/>
+        <br/>
       <br/>
       <Heading>Attribute Configuration</Heading>    
       <br/>
       <hr/>
                 <br/>
                <TextStyle variation="strong">Show on Cart Page:</TextStyle>
-                <input type="checkbox" name="required" value="Yes"/>
+                <input type="checkbox" name="required" value="Yes" />
                 <p>Tick if this attribute is required to be 
                     filled by your customers</p>
                 <br/>
 
 
                 <TextStyle variation="strong">Show on Register Page:</TextStyle>
-                <input type="checkbox" name="required" value="Yes"/>
+                <input type="checkbox" name="required" value="Yes" />
                 <p>Tick if this attribute is required to be 
                     filled by your customers</p>
                 <br/>
@@ -106,7 +108,7 @@ return(
 <br/>
 <br/>
 <Stack distribution="trailing">
-<button onClick={e => this.onSubmit(e)}>Add new Atribute</button>
+<button type="submit" >Add new Atribute</button>
 </Stack>
       </Card>
       <br/>
@@ -116,5 +118,5 @@ return(
   
  );
 }
-}
 
+export default AttributeCreation
