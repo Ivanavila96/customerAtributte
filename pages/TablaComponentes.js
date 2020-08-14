@@ -4,6 +4,30 @@ import React, {Fragment, Component, useCallback, useState, useRef} from "react";
 import {Card,Heading, Button, DataTable ,Link,EmptyState, AppProvider,Layout,Page, Stack, ActionList,  Avatar, ContextualSaveBar, FormLayout,Frame, Loading,Modal, Navigation, SkeletonBodyText, SkeletonDisplayText, SkeletonPage, TextContainer, TextField, Toast, TopBar} from "@shopify/polaris";
 import { Redirect } from '@shopify/app-bridge/actions';
 import {ArrowLeftMinor, AddMajorMonotone, NoteMajorMonotone, HomeMajorMonotone, OrdersMajorTwotone, MobileHamburgerMajorMonotone, ListMajorMonotone, BankMajorMonotone,TroubleshootMajorMonotone,SettingsMajorMonotone} from '@shopify/polaris-icons';
+import  gql  from 'graphql-tag';
+import {Query} from 'react-apollo';
+
+const GET_ATRIBUTOS_BY_ID = gql`
+    query get atributos($ids: [id!]!){
+      nodes(ids: $ids){
+        ...on 
+        atributo{
+          label
+          code
+          Type
+          sortingorder
+          status
+          cartpage
+          registerpage
+          id
+        }
+      }
+    }
+`;
+
+<Query query = {GET_ATRIBUTOS_BY_ID}>
+ 
+</Query>
 
 const AttributeTable = (props) => {
     return(

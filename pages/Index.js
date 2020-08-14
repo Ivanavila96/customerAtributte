@@ -4,7 +4,7 @@ import { Redirect } from '@shopify/app-bridge/actions';
 import { TitleBar } from '@shopify/app-bridge-react';
 import {CustomersMajorMonotone, CheckoutMajorMonotone, NoteMajorMonotone, HomeMajorMonotone, OrdersMajorTwotone, MobileHamburgerMajorMonotone, ListMajorMonotone, BankMajorMonotone,TroubleshootMajorMonotone,SettingsMajorMonotone} from '@shopify/polaris-icons';
 import actualPageMarkup from './navbar.js';
-
+import store from 'store-js';
 
 
 

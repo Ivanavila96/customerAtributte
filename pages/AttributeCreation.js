@@ -43,8 +43,7 @@ return(
 
   <form onSubmit={handleSubmit(onSubmit)}>
     <Card sectioned>     
-      <TextStyle variation="strong">Use Template:</TextStyle>
-        <Drop_1/>
+      
         <hr/>
         <br/>
         <Heading>Attribute Properties</Heading>    
@@ -120,3 +119,4 @@ return(
 }
 
 export default AttributeCreation
+
