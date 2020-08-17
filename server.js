@@ -27,7 +27,7 @@ app.prepare().then(() => {
     createShopifyAuth({
       apiKey: SHOPIFY_API_KEY,
       secret: SHOPIFY_API_SECRET_KEY,
-      scopes: ['read_products', 'write_products'],
+      scopes: ['read_products', 'write_products', 'read_themes', 'write_themes','read_customers','write_cutomers'],
       afterAuth(ctx) {
         const { shop, accessToken } = ctx.session;
         
@@ -41,7 +41,7 @@ app.prepare().then(() => {
     }),
   );
 
-  server.use(graphQLProxy({version: ApiVersion.October19}))
+  server.use(graphQLProxy({version: ApiVersion.July20}))
   server.use(verifyRequest());
   server.use(async (ctx) => {
     await handle(ctx.req, ctx.res);

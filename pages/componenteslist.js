@@ -44,15 +44,15 @@ function Lista  (){
     
   </Card>
 
-    <Card sectioned>
+      <br/>
       <Stack distribution="center">
       <AttributeCreation addAtributo ={addAtributo}/>
       </Stack>
-    </Card>
+  
+    <br/>
     
-    <Card sectioned>
     <AttributeTable deleteAtributo={deleteAtributo} Atributos={Atributos}/>
-    </Card>
+    
     <br/>
     <br/>
     <br/>

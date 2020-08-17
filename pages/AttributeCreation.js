@@ -25,27 +25,15 @@ const AttributeCreation = (props) => {
 
 return(
 <>
-  <Card sectioned title=" Create attribute">
-    <Stack distribution="leading">
-      <Link url='/Index' >
-        Home
-      </Link>
-           
-      <Link url='/componenteslist' >
-        Attributes
-      </Link>
-        <p>Attribute</p>
-    </Stack>      
-  </Card>
-        
-<Page>
   
+        
+
+<Card sectioned>     
 
   <form onSubmit={handleSubmit(onSubmit)}>
-    <Card sectioned>     
+   
       
-        <hr/>
-        <br/>
+        
         <Heading>Attribute Properties</Heading>    
         <br/>
     <hr/>
@@ -64,7 +52,6 @@ return(
         <input style={{width:'100%', height:'35px'}}
         type="text"
         name="code"
-        placeholder="Attribute Label"
         ref={register({required: {value: true, message: 'Valor requerido'}})}/>
         <p>For internal use. Must be unique with 
            no spaces and length &lt;= 30. Let 
@@ -75,8 +62,9 @@ return(
         <input style={{width:'100%', height:'35px'}}
         name="sortingorder"
         type="number"
-        placeholder="Attribute Label"
         ref={register({required: {value: true, message: 'Valor requerido'}})}/>
+        <p>Attributes are sorted in ascending order (eg: Attribute with sorting 
+          order 1 will be displayed on top of Attribute 2)</p>
           
         <br/>
         <br/>
@@ -109,14 +97,14 @@ return(
 <Stack distribution="trailing">
 <button type="submit" >Add new Atribute</button>
 </Stack>
-      </Card>
+      
       <br/>
     </form>
-  </Page>
+    </Card>
+  
 </>
   
  );
 }
 
 export default AttributeCreation
-

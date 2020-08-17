@@ -27,7 +27,7 @@ return(
             <br/>
               <Stack distribution="equalSpacing">
                 <p>Create an attribute</p>     
-                  <Link url='/AttributeCreation'>
+                  <Link url='/componenteslist'>
                     <Button primary >Start Task</Button>
                   </Link>
               </Stack>
@@ -83,4 +83,5 @@ return(
  export default Index 
 
 
+ 
  

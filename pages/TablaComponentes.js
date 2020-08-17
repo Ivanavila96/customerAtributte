@@ -7,30 +7,25 @@ import {ArrowLeftMinor, AddMajorMonotone, NoteMajorMonotone, HomeMajorMonotone, 
 import  gql  from 'graphql-tag';
 import {Query} from 'react-apollo';
 
-const GET_ATRIBUTOS_BY_ID = gql`
-    query get atributos($ids: [id!]!){
-      nodes(ids: $ids){
-        ...on 
-        atributo{
-          label
-          code
-          Type
-          sortingorder
-          status
-          cartpage
-          registerpage
-          id
-        }
+const GET_Atributos =gql`
+      query getAtributos{
+          Atributo{
+              id
+              code
+              label 
+              Type
+              sortingorder
+              status
+              cartpage
+              registerpage
+          }
       }
-    }
 `;
 
-<Query query = {GET_ATRIBUTOS_BY_ID}>
- 
-</Query>
 
 const AttributeTable = (props) => {
     return(
+      <Card sectioned>
     <table border="1" cellSpacing="8" cellPadding="10" align="center">
                 <thead>
                     <tr>
@@ -72,6 +67,7 @@ const AttributeTable = (props) => {
                       
                 </tbody>
             </table>
+            </Card>
     )
 }
   export default AttributeTable

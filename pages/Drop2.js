@@ -40,7 +40,7 @@ switch(param) {
                     filled by your customers</p>
                 <br/>
 
-                <TextStyle variation="strong">Input Validation:</TextStyle>
+                {/*<TextStyle variation="strong">Input Validation:</TextStyle>
                 <p>Input Validation:</p>
                 <select style={{width:'100%', height:'35px'}}  >
                   <option value="" selected="selected"></option>
@@ -52,28 +52,11 @@ switch(param) {
                   <option value="Letters">Letters</option>
                  </select>
                 <p>You need to chose default date again to 
-                  save with new formatd</p>
+                  save with new formatd</p>*/}
                 <br/>
             </Form>;
 
   case 'form_name2':
-    return  <Form name="form_name1" id="form_name2" >
-                
-                <TextStyle variation="strong">Default value:</TextStyle>
-                <input style={{width:'100%', height:'45px'}}
-                 />
-                <p>The default value for this attribute when 
-                    it is shown to your customers</p>
-                <br/>
-
-                <TextStyle variation="strong">Values Required:</TextStyle>
-                <input type="checkbox" name="required" value="Yes"/>
-                  <p>Tick if this attribute is required to be 
-                  filled by your customers</p>
-                  <br/>
-            </Form>;
-
-  case 'form_name3':
     return  <Form name="form_name3" id="form_name3" >
               
                 <TextStyle variation="strong">Default value:</TextStyle>
@@ -101,16 +84,7 @@ switch(param) {
 
             </Form>;
 
-case 'form_name4':
-    return  <Form name="form_name4" id="form_name4" >  
-            
-            <TextStyle variation="strong">Values Required:</TextStyle> 
-            <input type="checkbox" name="required" value="Yes"/>
-                <p>Tick if this attribute is required to be 
-                  filled by your customers</p>
-            </Form>;
-
-  case 'form_name5':
+  case 'form_name3':
     return  <Form name="form_name5" id="form_name5" >
 
                 <TextStyle variation="strong">Values Required:</TextStyle>
@@ -127,7 +101,7 @@ case 'form_name4':
                   this field</p>
             </Form>;
 
-  case 'form_name6':
+  case 'form_name4':
     return  <Form name="form_name6" id="form_name6" >
 
                 <TextStyle variation="strong">Default value:</TextStyle>
@@ -136,7 +110,7 @@ case 'form_name4':
                   it is shown to your customers</p>
             </Form>;
 
-case 'form_name7':
+case 'form_name5':
   return  <Form name="form_name7" id="form_name7" >
 
               <TextStyle variation="strong">Default Value:</TextStyle>
@@ -145,50 +119,6 @@ case 'form_name7':
               <p>The default value for this attribute when 
                 it is shown to your customers</p>
               <br/>
-          </Form>;
-
-case 'form_name8':
-  return  <Form name="form_name8" id="form_name8" >
-
-              <TextStyle variation="strong">Default value</TextStyle>
-              <input type="checkbox" name="required" value="Yes"/>
-              <p>The default value for this attribute when 
-                it is shown to your customers</p>
-              <br/>
-              
-              <br/>
-              <TextStyle variation="strong">Term link</TextStyle>
-              <input style={{width:'100%', height:'35px'}}
-                placeholder="Link to your terms page."/>
-              <br/>
-
-              <br/>
-              <TextStyle variation="strong">Term link text</TextStyle>
-              <input style={{width:'100%', height:'35px'}}
-                placeholder="Shop terms."/>
-              <br/>
-
-               <br/>     
-              <TextStyle variation="strong">Term warning text</TextStyle>
-              <input style={{width:'100%', height:'35px'}}
-                placeholder="You must read and accept the terms."/>
-          </Form>;
-
-case 'form_name9':
-  return  <Form name="form_name9" id="form_name9" >
-
-            <TextStyle variation="strong">Values Required</TextStyle>
-            <input type="checkbox" name="required" value="Yes"/>
-              <p>Tick if this attribute is required to be 
-                filled by your customers</p>
-              <br/>
-                  
-              <TextStyle variation="strong">Placeholder:</TextStyle>
-              <input style={{width:'100%', height:'35px'}}
-                />
-              <p>The placeholder specifies a short hint 
-                that describes the expected value of 
-                this field</p>
           </Form>;
 
 
@@ -207,14 +137,10 @@ return (
               <select value={this.state.selectedValue} style={{width:'100%', height:'35px'}} onChange={this.handleChange}>
                   <option value="" selected="selected"></option>
                   <option value="form_name1">Text Field</option>
-                  <option value="form_name2">Text Area</option>
-                  <option value="form_name3">Date</option>
-                  <option value="form_name4">Multiple Select</option>
-                  <option value="form_name5">Dropdown</option>
-                  <option value="form_name6">Yes/No</option>
-                  <option value="form_name7">Static Text</option>
-                  <option value="form_name8">Term of Usage</option>
-                  <option value="form_name9">Province</option>
+                  <option value="form_name2">Date</option>
+                  <option value="form_name3">Dropdown</option>
+                  <option value="form_name4">Yes/No</option>
+                  <option value="form_name5">Static Text</option>
               </select>
            </form>
            <br/>
