@@ -23,6 +23,24 @@ const GET_Atributos =gql`
 `;
 
 
+
+mutation{
+  addAtributo(
+        input:{
+            id:{Atributo.id}
+            code:{Atributo.code}
+            label:{Atributo.label}
+            Type:{Atributo.Type}
+            sortingorder:{Atributo.sortingorder}
+            status:{Atributo.status}
+            cartpage:{Atributo.cartpage}
+            registerpage:{Atributo.registerpage}
+          }
+  )
+}
+
+
+
 const AttributeTable = (props) => {
     return(
       <Card sectioned>
